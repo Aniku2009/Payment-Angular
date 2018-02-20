@@ -1,0 +1,26 @@
+#author{
+  text-align:center;
+  text-decoration: underline;
+  background-color:rgb(221, 212, 212);
+  border: 5px ridge white;
+  border-radius: 5px;
+  border-width: 5px;
+  margin: 10px 50%;
+  outline-color: rgb(145, 133, 133);
+  outline-style: ridge;
+  outline-width: 10px;
+  position: absolute;
+  width: 250px;
+}
+
+.author{
+  margin: 10px 40%;
+  position: absolute;
+  width: 250px;
+}
+.authorbutton {
+  margin: 50px 50%;
+  width: 63px;
+  text-transform: capitalize;
+  position: absolute;
+}

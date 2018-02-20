@@ -1,0 +1,80 @@
+h1{color: rgb(9, 31, 6);
+  text-align:center;
+  /*border: 5px groove rgb(95, 95, 160);
+  border-radius: 5px;
+  border-width: 5px;*/
+  border-bottom: 5px groove rgb(95, 95, 160);
+  letter-spacing: 3px;
+  text-shadow: 3px -3px rgb(126, 122, 122);
+
+}
+
+body{
+  position: relative;
+}
+
+.wholepage{
+  position: relative;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-image: url("Images/back.jpg");
+  align-content: center;
+}
+
+
+
+form{
+  padding: 20px;
+}
+
+i{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.leftColumn, .rightColumn{
+  float:left;
+  width: 48%;
+  padding: 20px;
+}
+
+
+
+td{
+  border:none;
+}
+
+table{
+  caption-side: top;
+}
+
+caption{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+
+tr:hover {
+  background-color: rgb(163, 154, 154);}
+
+input:focus {
+  background-color: rgb(134, 134, 156);
+}
+
+.nextStep {
+  display: none;
+}
+
+
+.submitEnergy:hover .nextStep{
+  display: block;
+}
+
+img{
+  opacity: 0.6;
+}
+
+img:hover {
+  opacity: 1.0;
+}
