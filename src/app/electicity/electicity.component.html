@@ -1,3 +1,46 @@
-<p>
-  electicity works!
-</p>
+<div class="wholepageEl">
+  <div align="center">
+    <h1>Fine! You are on <span style="color: rgb(76, 43, 226); font-size: 16px;"> Electricity </span> page</h1>
+    <img src="Images\flash.svg" height="40px">
+  </div>
+  <div class="leftColumn">
+    <div>
+      <h3>Pleaae, enter value of the used energy</h3>
+      <form>
+        <input type="number" [(ngModel)]="elValFROMHtml">
+        <h4>For {{elValFROMHtml}} amount of kW you should pay {{elValForHtml}} </h4>
+        <br>
+        <br>
+        <div class="submitEnergy">
+          <button (click) = "calcFromHtml($event)">Calculate Data</button>
+          <div class="nextStep">
+            <h5>You've just submit data. Please, choose next step</h5>
+            <a href="index.html">Go to the Main Page</a>
+            <br>
+            <a href="water.html">Go to the Water Page</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <i class="fa fa-file"></i>
+  </div>
+
+
+  <div class="rightColumn">
+    <table>
+      <caption>Usefull links</caption>
+      <tr>
+        <td>Link</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.oblenergo.kharkov.ua/consumers/tarifs/taryfy-na-elektroenergiyu-na-sichen-2018-roku">Current price</a></td>
+        <td>Here you can find official site of electricity provider company</td>
+      </tr>
+      <tr>
+        <td><a href="http://teplo.gov.ua/calculation">Subsidy calc</a></td>
+        <td>You van calculate subsidy for your current state</td>
+      </tr>
+    </table>
+  </div>
+</div>

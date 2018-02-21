@@ -19,8 +19,7 @@
   width: 250px;
 }
 .authorbutton {
-  margin: 50px 50%;
+  margin: 120px 50%;
   width: 63px;
-  text-transform: capitalize;
-  position: absolute;
+  position: relative;
 }
