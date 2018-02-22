@@ -4,6 +4,8 @@ import {ElectricityService} from './electricity.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {LogService} from './log.service';
+
 
 
 @Component({
@@ -23,12 +25,15 @@ export class ElecticityComponent implements OnInit {
 
   constructor(public electricityService: ElectricityService) { }
   item: ElectricityForm;
+
   elValFROMHtml: number;
   elValForHtml: number;
   elVal: ElectricityService = new ElectricityService();
+  price: number;
 
-  calcFromHtml($event): void {
-    this.elValForHtml = this.elVal.calcData(this.elValFROMHtml);
+
+  calcFromHtml(): void {
+     this.elValForHtml = this.elVal.calcData(this.elValFROMHtml, this.price);
   }
 
   ngOnInit() {

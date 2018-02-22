@@ -1,18 +1,27 @@
 <div class="wholepageEl">
   <div align="center">
     <h1>Fine! You are on <span style="color: rgb(76, 43, 226); font-size: 16px;"> Electricity </span> page</h1>
-    <img src="Images\flash.svg" height="40px">
+    <img src="../../assets/Images/flash.svg" height="40px">
   </div>
   <div class="leftColumn">
     <div>
-      <h3>Pleaae, enter value of the used energy</h3>
+      <h3>Pleaae, enter value of the used energy and it price</h3>
       <form>
-        <input type="number" [(ngModel)]="elValFROMHtml">
-        <h4>For {{elValFROMHtml}} amount of kW you should pay {{elValForHtml}} </h4>
-        <br>
-        <br>
+        <div>
+          kW<input type="number" name="value" [(ngModel)]="elValFROMHtml" #value="ngModel" required/>
+            <div [hidden]="value.valid || value.untouched" class="alert alert-danger">
+              There is no value
+            </div>
+          Price per kW<input type="number" name="price" [(ngModel)]="price" #priced="ngModel" required/>
+            <div [hidden]="priced.valid || priced.untouched" class="alert alert-danger">
+              There is no value for "Price"
+            </div>
+        </div>
+<br>
         <div class="submitEnergy">
-          <button (click) = "calcFromHtml($event)">Calculate Data</button>
+          <button [disabled]="value.invalid || priced.invalid"   (click) = "calcFromHtml()">Calculate Data</button>
+          <br>
+                   <h4>For {{elValFROMHtml}} amount of kW you should pay {{elValForHtml}} $ </h4>
           <div class="nextStep">
             <h5>You've just submit data. Please, choose next step</h5>
             <a href="index.html">Go to the Main Page</a>

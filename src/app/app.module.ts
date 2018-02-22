@@ -7,6 +7,7 @@ import { ElecticityComponent } from './electicity/electicity.component';
 import { WaterComponent } from './water/water.component';
 import {ElectricityForm} from './electicity/electricityForm';
 import {ElectricityService} from './electicity/electricity.service';
+import {LogService} from './electicity/log.service';
 
 
 
@@ -15,7 +16,7 @@ import {ElectricityService} from './electicity/electricity.service';
   imports: [
     BrowserModule, FormsModule
   ],
-  providers: [ElectricityService],
+  providers: [ElectricityService, LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
