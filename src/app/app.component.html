@@ -13,10 +13,14 @@
     <img src="../assets/Images/smiling.svg" alt="smile" height="40px">
   </div>
 
-  <form method="post" action="Electricity.html">
-    <div class="chooseMonth">
+  <form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
+    <div class="form-group">
       <h4>Select Month of payment</h4>
-      <input type="month" name="paymenttime"><br>
+      <input class="form-control" type="month" name="paymenttime" formControlName="timerange"><br>
+      <div class="alert alert-danger"
+           *ngIf="myForm.controls['timerange'].invalid && myForm.controls['timerange'].touched">
+        Не указано имя
+      </div>
       <br>
     </div>
     <div class="chooseType">
@@ -34,10 +38,10 @@
       <input type="radio" name="subsidy" value="Dont have" checked>No<br>
       <br>
     </div>
-    <button (click)="submitForm()" value="">Go to filling</button>
+    <button (click)="submit()" value="">Go to filling</button>
   </form>
 </div>
 
 </body>
 <app-about-author></app-about-author>
-<app-electicity></app-electicity>
+<!--<app-electicity></app-electicity>-->

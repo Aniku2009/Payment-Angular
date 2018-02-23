@@ -8,13 +8,14 @@ import { WaterComponent } from './water/water.component';
 import {ElectricityForm} from './electicity/electricityForm';
 import {ElectricityService} from './electicity/electricity.service';
 import {LogService} from './electicity/log.service';
+import { ReactiveFormsModule }   from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [ AppComponent, AboutAuthorComponent, ElecticityComponent, WaterComponent ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [ElectricityService, LogService],
   bootstrap: [AppComponent]

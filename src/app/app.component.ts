@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,21 @@ import { FormsModule } from '@angular/forms';
 
 export class AppComponent {
 
+myForm: FormGroup;
+constructor(){
+  this.myForm = new FormGroup({
+    'timerange' : new FormControl('2018-01',  [Validators.required, this.userNameValidator])
+  });
+}
+userNameValidator(control: FormControl): {[s: string]: boolean} {
+  console.log(control.value);
+  if(control.value==='2017-03'){
+    return {'timerange': true};
+  }
+  return null;
+}
 
+  submit(){
+    console.log(this.myForm);
+  }
 }
