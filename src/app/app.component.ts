@@ -15,13 +15,13 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {
   }
 
-  myForm: FormGroup=new FormGroup();
-'timerange': new FormControl ()
+  myForm: FormGroup = new FormGroup({
+'timerange': new FormControl ()});
 
   formfilling: FormFilling;
 
   ngOnInit() {
-    this.http.get('lust_update.json').subscribe((data: FormFilling) => this.formfilling = data);
+    this.http.get('./lust_update.json').subscribe((data: FormFilling) => this.formfilling = data);
   }
 
   userNameValidator(control: FormControl): { [s: string]: boolean } {
