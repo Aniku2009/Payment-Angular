@@ -12,7 +12,7 @@
   <div align="center">
     <img src="../assets/Images/smiling.svg" alt="smile" height="40px">
   </div>
-
+<div class="left-column-main">
   <form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
     <div class="form-group">
       <h4>Select Month of payment</h4>
@@ -41,7 +41,13 @@
     <button (click)="submit()" value="">Go to filling</button>
   </form>
 </div>
+</div>
 
+<div class="right-column-main">
+  <p>Last you payed for: {{formfilling?.type}}</p>
+  <p> Last month you filled in:{{formfilling?.date}}</p>
+  <p> Last time you payed $:{{formfilling?.value}}</p>
+</div>
 </body>
 <app-about-author></app-about-author>
 <!--<app-electicity></app-electicity>-->

@@ -5,8 +5,6 @@ import {FormFilling} from './FormFilling';
 export class FormFillingService {
   private data: FormFilling[] = [];
 
-  submitForm( date: string, typeOfPayment: string,  subsidy: boolean) {
-    this.data.push(new FormFilling(date, typeOfPayment, subsidy));
-  }
+
 
 }

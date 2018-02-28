@@ -1,5 +1,5 @@
-
 export class FormFilling {
-  constructor(public date: string, public typeOfPayment: string, public subsidy: boolean) {}
+  type: string;
+  date: string;
+  value: 100;
 }
-
