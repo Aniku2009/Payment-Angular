@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   formfilling: FormFilling;
 
   ngOnInit() {
-    this.http.get('./lust_update.json').subscribe((data: FormFilling) => this.formfilling = data);
+    this.http.get('../assets/lust_update.json').subscribe((data: FormFilling) => this.formfilling = data);
   }
 
   userNameValidator(control: FormControl): { [s: string]: boolean } {
@@ -36,3 +36,4 @@ export class AppComponent implements OnInit {
     console.log(this.myForm);
   }
 }
+

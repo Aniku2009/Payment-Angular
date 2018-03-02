@@ -10,13 +10,18 @@ import {ElectricityService} from './electicity/electricity.service';
 import {LogService} from './electicity/log.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {Routes, RouterModule} from '@angular/router';
 
+
+const appRoutes: Routes = [
+  { path: '', component: AppComponent},
+  { path: 'w', component: WaterComponent},
+  { path: 'e', component: ElecticityComponent}
+  ];
 
 @NgModule({
   declarations: [ AppComponent, AboutAuthorComponent, ElecticityComponent, WaterComponent ],
-  imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule
-  ],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
   providers: [ElectricityService, LogService],
   bootstrap: [AppComponent]
 })
